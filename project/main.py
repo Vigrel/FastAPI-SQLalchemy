@@ -50,7 +50,7 @@ async def delete_product(product_id: str) -> dict[str]:
     for product in products:
         if product.id == product_id:
             products.remove(product)
-            return {"message": "resource deleted successfully"}
+            return
     raise HTTPException(
         status_code=status.HTTP_404_NOT_FOUND, detail="Product not found"
     )
