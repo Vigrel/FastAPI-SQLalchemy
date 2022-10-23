@@ -17,7 +17,7 @@ app = FastAPI()
 async def get_products():
     return products
 
-@app.delete("/products/{product_id}", status_code=204)
+@app.delete("/products/{product_id}", status_code=204, response_model=None)
 async def get_product(product_id: int = Path(..., title="The ID of the item to delete")):
     for product in products:
         if product.id == product_id:
