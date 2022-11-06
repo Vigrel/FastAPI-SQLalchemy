@@ -1,0 +1,1 @@
+URL_CONECTION = "mysql+pymysql://USER:PASSWORD@PORT/DB_NAME"
